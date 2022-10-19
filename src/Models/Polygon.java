@@ -16,6 +16,9 @@ public class Polygon {
         return points.get(idx);
     }
 
+    public void clearPoints(){
+        points.clear();
+    }
     public int getCount(){
         return points.size();
     }

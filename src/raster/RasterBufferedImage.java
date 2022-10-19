@@ -17,13 +17,12 @@ public class RasterBufferedImage implements Raster {
 
     @Override
     public int getPixel(int x, int y) {
-        //TODO
-        return 0;
+        return image.getRGB(x, y);
     }
-
+    @Override
     public void clear(){
         Graphics gr = image.getGraphics();
-        gr.setColor(new Color(0x1a1a1a));
+        gr.setColor(Color.BLACK);
         gr.fillRect(0,0, image.getWidth(), image.getHeight());
     }
     public void present(Graphics g){
